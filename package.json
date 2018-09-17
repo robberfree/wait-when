@@ -1,0 +1,36 @@
+{
+  "name": "wait-when",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "Execute when condition fulfill.",
+  "main": "./dist/wait-when.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "node ./test/node/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robberfree/wait-when.git"
+  },
+  "keywords": [
+    "condition",
+    "fulfill",
+    "execute"
+  ],
+  "author": "robberfree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robberfree/wait-when/issues"
+  },
+  "homepage": "https://github.com/robberfree/wait-when#readme",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "webpack": "^4.19.0",
+    "webpack-cli": "^3.1.0"
+  }
+}

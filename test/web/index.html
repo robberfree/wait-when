@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>wait-when.js web test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../dist/wait-when.min.js"></script>
+</head>
+
+<body>
+    <p></p>
+    <script>
+        (function () {
+            var Condition = ww.Condition;
+            var WaitWhen = ww.WaitWhen;
+
+            var c1 = new Condition(10000, 0);
+            var c2 = new Condition(true, false);
+            new WaitWhen().then([c1, c2], function () {
+                document.querySelector('p').textContent = 'all conditions fulfill';
+                document.body.style.backgroundColor = '#e8f5e9';
+            });
+            setTimeout(function () {
+                c1.value = 10000;
+            }, 1000);
+
+            setTimeout(function () {
+                c2.value = true;
+            }, 2000);
+
+        })();
+    </script>
+
+
+</body>
+
+</html>
