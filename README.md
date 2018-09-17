@@ -2,6 +2,25 @@
 
 Execute when condition fulfill.
 
+## Usage
+
+- Node
+
+> npm i wait-when
+
+- Browser
+
+```html
+<script src="wait-when.min.js"></script>
+```
+
+It has a global variable "ww".
+
+```js
+var Condition = ww.Condition;
+var WaitWhen = ww.WaitWhen;
+```
+
 ## API
 
 1. Condition(fulfillValue,value)
@@ -28,7 +47,7 @@ c.value = true;
 var ww = new WaitWhen();
 ```
 
-3. WaitWhen.then(conditions,cb)
+4. WaitWhen.then(conditions,cb)
 
 ```js
 www.then(c, function() {
@@ -39,4 +58,8 @@ www.then([c1, c2, c3], function() {
 });
 ```
 
-##
+## Build
+
+If you want to build by yourself.please run
+
+> npm run build
