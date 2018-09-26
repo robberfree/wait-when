@@ -8,6 +8,10 @@ Execute when condition fulfill.
 
 > npm i wait-when
 
+```js
+const { Condition, WaitWhen } = require('wait-when');
+```
+
 - Browser
 
 ```html
@@ -31,14 +35,16 @@ var c = new Condition(true, false);
 
 2. Condition.value
 
-(need rewrite?)
-
 Set condition's value.
-You should create a new value and assign to it.
-Don't change the old value directly.
+
+You can create a new value and assign to it.(Recommended)
+
+For array and object value you can also change it directly.
 
 ```js
 c.value = true;
+c.value.push('item');
+c.value.key = 'value';
 ```
 
 3. WaitWhen
@@ -50,10 +56,10 @@ var ww = new WaitWhen();
 4. WaitWhen.then(conditions,cb)
 
 ```js
-www.then(c, function() {
+ww.then(c, function() {
   console.log('the condition named c fulfilled');
 });
-www.then([c1, c2, c3], function() {
+ww.then([c1, c2, c3], function() {
   console.log('all conditions fullfilled');
 });
 ```
