@@ -6,6 +6,9 @@ const nodeConfig = {
     filename: 'wait-when.js',
     libraryTarget: 'commonjs2' //The return value of the entry point will be assigned to the module.exports.
   },
+  module: {
+    rules: [{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }]
+  },
   mode: 'production'
 };
 
