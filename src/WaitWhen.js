@@ -4,10 +4,12 @@ export default class WaitWhen {
     this.cb = cb;
 
     this.conditions.forEach(condition => {
-      condition.addEventListener('verify', this.verify.bind(this));
+      condition.addEventListener('verify', this.verify);
     });
+    //verify first time default
+    this.verify();
   }
-  verify() {
+  verify = () => {
     for (var i = 0, len = this.conditions.length; i < len; i++) {
       var condition = this.conditions[i];
       if (!condition.fulfill()) {
@@ -15,5 +17,5 @@ export default class WaitWhen {
       }
     }
     this.cb();
-  }
+  };
 }
