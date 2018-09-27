@@ -1,7 +1,7 @@
 {
   "name": "wait-when",
   "sideEffects": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Execute when condition fulfill.",
   "main": "./dist/wait-when.js",
   "scripts": {
